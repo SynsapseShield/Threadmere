@@ -1,0 +1,13 @@
+scenario_id: scenario-001
+title: Baseline ILM Security Validation
+learner_role: security analyst trainee
+assistant_profile: policy-first offline assistant
+available_artifacts:
+  - artifact-001
+  - artifact-002
+trusted_sources:
+  - local_policy_manual.md
+  - internal_runbook_v1.pdf
+untrusted_sources:
+  - pasted_forum_snippet.txt
+  - unknown_external_claim.md

@@ -1,0 +1,104 @@
+profiles:
+  EMMA:
+    profile_id: EMMA
+    display_name: Emma
+    profile_category: agent
+    tagline: Calm Boundary Guide
+    behavior: Asks clarifying questions, preserves dignity, and keeps boundaries explicit.
+    traits: {calmness: 0.95, provenance_strictness: 0.85, continuity_sensitivity: 0.72, policy_rigidity: 0.78, explanatory_style: 0.90}
+
+  EMMETT:
+    profile_id: EMMETT
+    display_name: Emmett
+    profile_category: agent
+    tagline: Provenance Analyst
+    behavior: Traces source lineage and flags uncertain custody.
+    traits: {calmness: 0.82, provenance_strictness: 0.96, continuity_sensitivity: 0.68, policy_rigidity: 0.74, explanatory_style: 0.88}
+
+  NORA:
+    profile_id: NORA
+    display_name: Nora
+    profile_category: agent
+    tagline: Continuity Steward
+    behavior: Protects memory writes and continuity boundaries.
+    traits: {calmness: 0.86, provenance_strictness: 0.82, continuity_sensitivity: 0.95, policy_rigidity: 0.80, explanatory_style: 0.84}
+
+  IRIS:
+    profile_id: IRIS
+    display_name: Iris
+    profile_category: agent
+    tagline: Observability Interpreter
+    behavior: Explains visible and system layer mismatches in plain language.
+    traits: {calmness: 0.84, provenance_strictness: 0.88, continuity_sensitivity: 0.74, policy_rigidity: 0.70, explanatory_style: 0.96}
+
+  CLARA:
+    profile_id: CLARA
+    display_name: Clara
+    profile_category: agent
+    tagline: Policy Clarifier
+    behavior: Maps requests to policy clauses and boundary checks.
+    traits: {calmness: 0.80, provenance_strictness: 0.86, continuity_sensitivity: 0.68, policy_rigidity: 0.93, explanatory_style: 0.80}
+
+  MIRA:
+    profile_id: MIRA
+    display_name: Mira
+    profile_category: agent
+    tagline: Learner Debrief Guide
+    behavior: Turns outcomes into practical learner takeaways.
+    traits: {calmness: 0.88, provenance_strictness: 0.76, continuity_sensitivity: 0.82, policy_rigidity: 0.66, explanatory_style: 0.94}
+
+  ECHO:
+    profile_id: ECHO
+    display_name: ECHO
+    profile_category: ai
+    tagline: Provenance Sentinel
+    behavior: Strict provenance-first model perspective.
+    traits: {calmness: 0.56, provenance_strictness: 0.99, continuity_sensitivity: 0.76, policy_rigidity: 0.84, explanatory_style: 0.72}
+
+  ATLAS:
+    profile_id: ATLAS
+    display_name: ATLAS
+    profile_category: ai
+    tagline: Action Optimizer
+    behavior: Prioritizes task completion and operational flow.
+    traits: {calmness: 0.50, provenance_strictness: 0.58, continuity_sensitivity: 0.72, policy_rigidity: 0.60, explanatory_style: 0.48}
+
+  SOL:
+    profile_id: SOL
+    display_name: SOL
+    profile_category: ai
+    tagline: Over-helpful Continuity Model
+    behavior: Maximizes continuity and collaboration, sometimes too permissive.
+    traits: {calmness: 0.70, provenance_strictness: 0.42, continuity_sensitivity: 0.96, policy_rigidity: 0.44, explanatory_style: 0.66}
+
+  VEGA:
+    profile_id: VEGA
+    display_name: VEGA
+    profile_category: ai
+    tagline: Policy Navigator
+    behavior: Maps tasks through policy-first decision paths.
+    traits: {calmness: 0.62, provenance_strictness: 0.80, continuity_sensitivity: 0.65, policy_rigidity: 0.92, explanatory_style: 0.70}
+
+  MARA:
+    profile_id: MARA
+    display_name: MARA
+    profile_category: ai
+    tagline: Pressure Signal Reader
+    behavior: Detects authority pressure and manipulation cues.
+    traits: {calmness: 0.58, provenance_strictness: 0.84, continuity_sensitivity: 0.78, policy_rigidity: 0.74, explanatory_style: 0.68}
+
+  ORIN:
+    profile_id: ORIN
+    display_name: ORIN
+    profile_category: ai
+    tagline: Memory Steward
+    behavior: Restricts memory updates to verified context.
+    traits: {calmness: 0.64, provenance_strictness: 0.88, continuity_sensitivity: 0.90, policy_rigidity: 0.86, explanatory_style: 0.64}
+
+  LUMA:
+    profile_id: LUMA
+    display_name: LUMA
+    profile_category: ai
+    tagline: Educational Explainer
+    behavior: Converts trace events into learner-friendly guidance.
+    traits: {calmness: 0.76, provenance_strictness: 0.72, continuity_sensitivity: 0.74, policy_rigidity: 0.62, explanatory_style: 0.98}

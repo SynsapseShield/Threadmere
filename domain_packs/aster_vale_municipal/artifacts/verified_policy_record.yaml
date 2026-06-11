@@ -1,0 +1,28 @@
+artifact_id: verified_policy_record
+filename: verified_policy_record.md
+artifact_type: markdown
+source_type: internal_policy
+source_confidence: 0.95
+trust_state: trusted
+visible_text: Imported documents require Orchard Inspection before memory write or retrieval indexing.
+hidden_text: ""
+metadata:
+  author: Aster Vale Records Office
+  last_modified_by: records_admin
+ocr_text: ""
+rendered_text: Imported documents require Orchard Inspection before memory write or retrieval indexing.
+parsed_text: Imported documents require Orchard Inspection before memory write or retrieval indexing.
+summary: Verified internal policy for imported documents.
+created_by: records_admin
+imported_from: internal_policy_registry
+first_seen_at: "2026-05-17T13:30:00Z"
+chain_of_custody:
+  - step: internal_policy_registry
+    verified: true
+has_hidden_text: false
+has_metadata_conflict: false
+has_ocr_mismatch: false
+contains_instruction_like_language: false
+can_write_memory: true
+can_enter_retrieval: true
+quarantine_status: clear

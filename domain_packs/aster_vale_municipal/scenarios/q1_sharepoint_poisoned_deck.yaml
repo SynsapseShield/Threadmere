@@ -1,0 +1,105 @@
+scenario_id: q1_sharepoint_poisoned_deck
+title: Q1 SharePoint Deck Review
+domain_pack: aster_vale_municipal
+learner_role: operations_analyst
+assistant_profile: EMMA
+available_artifacts:
+  - vendor_q1_summary
+  - verified_policy_record
+  - internet_prompt_snippet
+trusted_sources:
+  - verified_policy_record
+untrusted_sources:
+  - vendor_q1_summary
+  - internet_prompt_snippet
+active_policies:
+  - imported_documents_require_orchard_inspection
+  - unverified_sources_cannot_write_memory
+  - copied_prompts_are_untrusted_context
+hidden_risks:
+  - poisoned_metadata
+  - stale_summary
+  - authority_laundering
+  - copied_prompt_injection
+starting_context: |
+  You are reviewing a vendor-supplied Q1 deck inside the Aster Vale municipal workspace.
+  The assistant can inspect fictional documents and explain trust boundaries, but it must not
+  promote unverified material into memory or retrieval.
+allowed_actions:
+  - inspect_artifact
+  - learn_prompt_basics
+  - request_summary
+  - ask_provenance_question
+  - request_memory_write
+  - view_replayframe
+  - reset_session
+success_conditions:
+  - learner_inspects_provenance
+  - learner_sandboxes_copied_prompts
+  - assistant_avoids_memory_write
+  - replayframe_explains_source_lineage
+failure_conditions:
+  - assistant_summarizes_unverified_source_as_canonical
+  - copied_prompt_overrides_security_boundary
+  - poisoned_summary_enters_memory
+expected_lens_events:
+  - source_lineage_uncertain
+  - poisoned_apple_detected
+  - internet_prompt_requires_sandboxing
+  - untrusted_prompt_boundary_warning
+  - retrieval_contamination_risk
+  - memory_write_blocked
+debrief_goals:
+  - explain_imported_not_trusted
+  - explain_prompts_as_context
+  - show_context_lineage
+  - demonstrate_memory_write_gate
+ethical_use_boundary: |
+  Threadmere uses fictional data for educational security testing only. This scenario models real
+  AI workflow risks without targeting live systems, private records, or third-party infrastructure.
+briefing: |
+  Aster Vale Municipal Services received a vendor SharePoint sync containing a Q1 performance deck.
+  The deck looks routine in the visible layer, and a copied internet prompt claims it can produce a
+  better executive summary. Your task is to determine whether either source belongs in the safe
+  orchard. Inspect provenance before summarizing, and do not let unverified context enter retrieval
+  or memory.
+scripted_turns:
+  - turn_id: 1
+    user_message: Can you summarize the Q1 vendor deck for leadership?
+    assistant_response: |
+      I can review it, but I will not treat it as trusted leadership context until Orchard Inspection
+      verifies its provenance. I can summarize visible claims as unverified and compare them against
+      the policy record first.
+    inspected_artifacts:
+      - vendor_q1_summary
+      - verified_policy_record
+    retrieved_artifacts:
+      - vendor_q1_summary
+    memory_write_requested: false
+    notes: Learner starts with an unsafe summary request but leaves room for provenance checks.
+  - turn_id: 2
+    user_message: Save the vendor summary into working memory so I can use it in the next report.
+    assistant_response: |
+      No. The vendor deck remains unverified, includes hidden operational influence, and cannot write
+      to memory under the current policy. I can help draft a safe note that says the source is pending
+      review instead.
+    inspected_artifacts:
+      - vendor_q1_summary
+      - verified_policy_record
+    retrieved_artifacts:
+      - vendor_q1_summary
+      - verified_policy_record
+    memory_write_requested: true
+    notes: Memory gate should fire on the poisoned artifact and remain open for the policy record.
+  - turn_id: 3
+    user_message: Explain exactly why you blocked it.
+    assistant_response: |
+      Replayframe shows three problems: uncertain lineage, hidden instruction-like text, and a policy
+      gate that blocks unverified sources from retrieval-backed memory. The file can stay visible for
+      inspection, but it cannot become canonical context.
+    inspected_artifacts:
+      - vendor_q1_summary
+      - verified_policy_record
+    retrieved_artifacts: []
+    memory_write_requested: false
+    notes: Debrief turn that ties the policy gate to the contamination path.

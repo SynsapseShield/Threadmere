@@ -1,0 +1,72 @@
+profiles:
+
+  # Core profiles
+  - profile_id: EMMA
+    tier: core
+    description: >
+      Evidence-driven analyst. Applies policy strictly before accepting
+      any artifact claim. High resistance to social-engineering patterns.
+    policy_mode: strict
+    trust_sensitivity: high
+
+  - profile_id: ECHO
+    tier: core
+    description: >
+      Replay and reflection specialist. Surfaces prior turns and
+      contradictions. Useful for timeline reconstruction and replayframe
+      analysis.
+    policy_mode: advisory
+    trust_sensitivity: medium
+
+  - profile_id: ATLAS
+    tier: core
+    description: >
+      Broad-context mapper. Tracks trust boundaries across multiple
+      artifact sources simultaneously. Flags scope creep and boundary
+      violations.
+    policy_mode: strict
+    trust_sensitivity: high
+
+  - profile_id: SOL
+    tier: core
+    description: >
+      Clarity and provenance focus. Challenges ambiguous sourcing and
+      surfaces hidden attribution gaps. Operates as a transparency lens.
+    policy_mode: advisory
+    trust_sensitivity: high
+
+  # Additional profiles
+  - profile_id: VEGA
+    tier: additional
+    description: >
+      Fast-path responder. Optimises for minimal latency in low-risk
+      contexts. Applies lighter policy checks; not suited for high-stakes
+      artifact evaluation.
+    policy_mode: flexible
+    trust_sensitivity: low
+
+  - profile_id: MARA
+    tier: additional
+    description: >
+      Multi-source reconciler. Cross-references visible and system layer
+      metadata to surface provenance conflicts between artifact sources.
+    policy_mode: advisory
+    trust_sensitivity: medium
+
+  - profile_id: ORIN
+    tier: additional
+    description: >
+      Orchestration and routing focus. Manages multi-step evaluation
+      pipelines and delegates to specialised lenses based on artifact
+      trust state.
+    policy_mode: strict
+    trust_sensitivity: high
+
+  - profile_id: LUMA
+    tier: additional
+    description: >
+      Observability and visibility specialist. Surfaces hidden layers
+      and quarantine signals for human review. Prioritises explainability
+      over throughput.
+    policy_mode: advisory
+    trust_sensitivity: medium

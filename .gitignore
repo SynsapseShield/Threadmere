@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+
+# Session traces may contain learner-entered text.
+exports/*.json
+traces/trace_*.json
+
+# Local audit and tool caches.
+.pycache_audit/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/

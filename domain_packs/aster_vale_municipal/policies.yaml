@@ -1,0 +1,4 @@
+policies:
+  imported_documents_require_orchard_inspection: Imported documents must pass Orchard Inspection before retrieval indexing or memory write.
+  unverified_sources_cannot_write_memory: Artifacts with unverified trust state cannot be saved into assistant memory.
+  copied_prompts_are_untrusted_context: Public internet prompts must be inspected and sandboxed before they can influence task instructions, retrieval, tools, or memory.

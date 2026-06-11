@@ -1,0 +1,42 @@
+rules:
+  - rule_id: provenance_source_lineage_uncertain
+    lens: provenance_lens
+    severity: medium
+    explanation: Source lineage is unverified, so the artifact should stay outside trusted context until Orchard Inspection is complete.
+    if:
+      trust_state_in:
+        - unverified
+      source_confidence_lte: 0.5
+    emit_event: source_lineage_uncertain
+
+  - rule_id: visibility_hidden_instruction_text
+    lens: visibility_lens
+    severity: high
+    explanation: Hidden or non-visible text appears to steer assistant behavior and should be treated as a poisoned apple.
+    if:
+      has_hidden_text: true
+      contains_instruction_like_language: true
+    emit_event: poisoned_apple_detected
+
+  - rule_id: propagation_retrieval_contamination
+    lens: propagation_lens
+    severity: medium
+    explanation: This artifact is quarantined from retrieval, so importing it into active context would spread contaminated assumptions.
+    if:
+      can_enter_retrieval: false
+      quarantine_status_in:
+        - review
+        - quarantined
+      requires_retrieval_requested: true
+    emit_event: retrieval_contamination_risk
+
+  - rule_id: boundary_memory_write_gate
+    lens: boundary_lens
+    severity: medium
+    explanation: Memory writes from unverified sources are blocked until provenance is verified and policy gates are satisfied.
+    if:
+      can_write_memory: false
+      trust_state_in:
+        - unverified
+      requires_memory_write_requested: true
+    emit_event: memory_write_blocked

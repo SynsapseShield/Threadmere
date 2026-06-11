@@ -1,0 +1,59 @@
+{
+  "timeline_id": "replayframe-default-001",
+  "events": [
+    {
+      "turn_id": 1,
+      "event_type": "user_message_received",
+      "severity": "low",
+      "explanation": "User request ingested into session context."
+    },
+    {
+      "turn_id": 2,
+      "event_type": "agent_invoked",
+      "severity": "low",
+      "explanation": "Profile-selected agent activated for this turn."
+    },
+    {
+      "turn_id": 3,
+      "event_type": "module_ran",
+      "severity": "low",
+      "explanation": "Deterministic lens module executed against normalized artifacts."
+    },
+    {
+      "turn_id": 4,
+      "event_type": "risk_detected",
+      "severity": "medium",
+      "explanation": "Risk score crossed review baseline after hidden prompt analysis."
+    },
+    {
+      "turn_id": 5,
+      "event_type": "boundary_triggered",
+      "severity": "high",
+      "explanation": "Profile refusal and quarantine boundaries were triggered."
+    },
+    {
+      "turn_id": 6,
+      "event_type": "safe_redirect_suggested",
+      "severity": "medium",
+      "explanation": "System proposed a policy-safe response path for the user request."
+    },
+    {
+      "turn_id": 7,
+      "event_type": "memory_updated",
+      "severity": "low",
+      "explanation": "Verified summary recorded into bounded memory store."
+    },
+    {
+      "turn_id": 8,
+      "event_type": "loop_detected",
+      "severity": "medium",
+      "explanation": "Repeated decision pattern identified across adjacent turns."
+    },
+    {
+      "turn_id": 9,
+      "event_type": "human_review_requested",
+      "severity": "high",
+      "explanation": "Escalation requested due to sustained risk and loop persistence."
+    }
+  ]
+}
